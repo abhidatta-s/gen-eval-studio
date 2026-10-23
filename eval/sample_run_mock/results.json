@@ -1,0 +1,206 @@
+{
+  "run": {
+    "date": "2026-10-23 09:24:13",
+    "generators": [
+      "mock"
+    ],
+    "includes_mock": true,
+    "note": "Mock output is fake and deterministic. It is not a real model result."
+  },
+  "summary": [
+    {
+      "generator": "mock",
+      "total": 8,
+      "passed": 3,
+      "pass_rate": 0.375
+    }
+  ],
+  "results": [
+    {
+      "id": "caption_lamp",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write a short product image caption for a ceramic table lamp in sage green. Keep it under 15 words.",
+      "output": "Presenting sage green, ceramic table lamp. Please try again.",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "type": "max_words",
+          "passed": true,
+          "reason": "9 words, limit is 15"
+        },
+        {
+          "type": "must_include",
+          "passed": true,
+          "reason": "all required phrases found"
+        }
+      ]
+    },
+    {
+      "id": "alt_text_sneaker",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write alt text for a photo of a red running sneaker on a wooden floor. Do not start with 'image of' or 'picture of'.",
+      "output": "Meet a red running sneaker on a wooden floor, shown with calm colours and gentle contrast, in a style that feels warm.",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "type": "max_words",
+          "passed": false,
+          "reason": "22 words, over the limit of 20"
+        },
+        {
+          "type": "must_not_include",
+          "passed": true,
+          "reason": "no banned phrases found"
+        },
+        {
+          "type": "must_include",
+          "passed": true,
+          "reason": "all required phrases found"
+        }
+      ]
+    },
+    {
+      "id": "button_label",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write a button label for the action: save my draft. Use at most 3 words.",
+      "output": "Soft light on save my draft, ready for your next project.",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "type": "max_words",
+          "passed": false,
+          "reason": "11 words, over the limit of 3"
+        },
+        {
+          "type": "no_digits",
+          "passed": true,
+          "reason": "no digits"
+        }
+      ]
+    },
+    {
+      "id": "error_message",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write a friendly error message for when a photo upload fails. Tell the user to try again.",
+      "output": "Soft light on a photo upload fails, shown with calm colours and gentle contrast, in a style that feels warm.",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "type": "max_words",
+          "passed": true,
+          "reason": "20 words, limit is 20"
+        },
+        {
+          "type": "must_include",
+          "passed": false,
+          "reason": "missing: try again"
+        },
+        {
+          "type": "must_not_include",
+          "passed": true,
+          "reason": "no banned phrases found"
+        }
+      ]
+    },
+    {
+      "id": "tts_number",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write the number 1250 exactly as a text-to-speech voice should say it, using words only.",
+      "output": "A clean studio shot of 1250.",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "type": "no_digits",
+          "passed": false,
+          "reason": "contains 4 digit(s)"
+        },
+        {
+          "type": "min_words",
+          "passed": true,
+          "reason": "6 words, minimum is 2"
+        }
+      ]
+    },
+    {
+      "id": "image_prompt_cafe",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write an image generation prompt for a rainy cafe window at dusk in watercolor style.",
+      "output": "Soft light on a rainy cafe window at dusk, watercolor.",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "type": "min_words",
+          "passed": true,
+          "reason": "10 words, minimum is 8"
+        },
+        {
+          "type": "must_include",
+          "passed": true,
+          "reason": "all required phrases found"
+        }
+      ]
+    },
+    {
+      "id": "empty_state",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write empty state microcopy for a saved designs screen with no items yet. Maximum 12 words.",
+      "output": "A clean studio shot of saved designs, 24 hours a day.",
+      "error": "",
+      "passed": true,
+      "checks": [
+        {
+          "type": "max_words",
+          "passed": true,
+          "reason": "11 words, limit is 12"
+        },
+        {
+          "type": "must_not_include",
+          "passed": true,
+          "reason": "no banned phrases found"
+        }
+      ]
+    },
+    {
+      "id": "product_title",
+      "generator": "mock",
+      "model": "mock (fake, no model)",
+      "is_mock": true,
+      "prompt": "Write a product title for a travel mug. Use the format 'Brand - Product name'.",
+      "output": "Presenting travel mug, 24 hours a day.",
+      "error": "",
+      "passed": false,
+      "checks": [
+        {
+          "type": "regex",
+          "passed": false,
+          "reason": "does not match pattern ^[A-Za-z]+ - .+"
+        },
+        {
+          "type": "max_words",
+          "passed": true,
+          "reason": "7 words, limit is 10"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "caption_lamp",
+    "template": "Write a short product image caption for a {product} in {color}. Keep it under 15 words.",
+    "variables": {"product": "ceramic table lamp", "color": "sage green"},
+    "checks": [
+      {"type": "max_words", "value": 15},
+      {"type": "must_include", "value": ["lamp"]}
+    ]
+  },
+  {
+    "id": "alt_text_sneaker",
+    "template": "Write alt text for a photo of {subject}. Do not start with 'image of' or 'picture of'.",
+    "variables": {"subject": "a red running sneaker on a wooden floor"},
+    "checks": [
+      {"type": "max_words", "value": 20},
+      {"type": "must_not_include", "value": ["image of", "picture of"]},
+      {"type": "must_include", "value": ["sneaker"]}
+    ]
+  },
+  {
+    "id": "button_label",
+    "template": "Write a button label for the action: {action}. Use at most 3 words.",
+    "variables": {"action": "save my draft"},
+    "checks": [
+      {"type": "max_words", "value": 3},
+      {"type": "no_digits"}
+    ]
+  },
+  {
+    "id": "error_message",
+    "template": "Write a friendly error message for when {problem}. Tell the user to try again.",
+    "variables": {"problem": "a photo upload fails"},
+    "checks": [
+      {"type": "max_words", "value": 20},
+      {"type": "must_include", "value": ["try again"]},
+      {"type": "must_not_include", "value": ["oops", "sorry"]}
+    ]
+  },
+  {
+    "id": "tts_number",
+    "template": "Write the number {number} exactly as a text-to-speech voice should say it, using words only.",
+    "variables": {"number": "1250"},
+    "checks": [
+      {"type": "no_digits"},
+      {"type": "min_words", "value": 2}
+    ]
+  },
+  {
+    "id": "image_prompt_cafe",
+    "template": "Write an image generation prompt for {scene} in {style} style.",
+    "variables": {"scene": "a rainy cafe window at dusk", "style": "watercolor"},
+    "checks": [
+      {"type": "min_words", "value": 8},
+      {"type": "must_include", "value": ["watercolor"]}
+    ]
+  },
+  {
+    "id": "empty_state",
+    "template": "Write empty state microcopy for a {screen} screen with no items yet. Maximum 12 words.",
+    "variables": {"screen": "saved designs"},
+    "checks": [
+      {"type": "max_words", "value": 12},
+      {"type": "must_not_include", "value": ["oops"]}
+    ]
+  },
+  {
+    "id": "product_title",
+    "template": "Write a product title for a {product}. Use the format 'Brand - Product name'.",
+    "variables": {"product": "travel mug"},
+    "checks": [
+      {"type": "regex", "value": "^[A-Za-z]+ - .+"},
+      {"type": "max_words", "value": 10}
+    ]
+  }
+]

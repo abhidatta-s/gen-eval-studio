@@ -1,0 +1,9 @@
+id,generator,model,is_mock,passed,output,checks,error
+caption_lamp,mock,"mock (fake, no model)",True,True,"Presenting sage green, ceramic table lamp. Please try again.","PASS max_words (9 words, limit is 15); PASS must_include (all required phrases found)",
+alt_text_sneaker,mock,"mock (fake, no model)",True,False,"Meet a red running sneaker on a wooden floor, shown with calm colours and gentle contrast, in a style that feels warm.","FAIL max_words (22 words, over the limit of 20); PASS must_not_include (no banned phrases found); PASS must_include (all required phrases found)",
+button_label,mock,"mock (fake, no model)",True,False,"Soft light on save my draft, ready for your next project.","FAIL max_words (11 words, over the limit of 3); PASS no_digits (no digits)",
+error_message,mock,"mock (fake, no model)",True,False,"Soft light on a photo upload fails, shown with calm colours and gentle contrast, in a style that feels warm.","PASS max_words (20 words, limit is 20); FAIL must_include (missing: try again); PASS must_not_include (no banned phrases found)",
+tts_number,mock,"mock (fake, no model)",True,False,A clean studio shot of 1250.,"FAIL no_digits (contains 4 digit(s)); PASS min_words (6 words, minimum is 2)",
+image_prompt_cafe,mock,"mock (fake, no model)",True,True,"Soft light on a rainy cafe window at dusk, watercolor.","PASS min_words (10 words, minimum is 8); PASS must_include (all required phrases found)",
+empty_state,mock,"mock (fake, no model)",True,True,"A clean studio shot of saved designs, 24 hours a day.","PASS max_words (11 words, limit is 12); PASS must_not_include (no banned phrases found)",
+product_title,mock,"mock (fake, no model)",True,False,"Presenting travel mug, 24 hours a day.","FAIL regex (does not match pattern ^[A-Za-z]+ - .+); PASS max_words (7 words, limit is 10)",
