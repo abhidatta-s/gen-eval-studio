@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/", "destination": "/eval/sample_run_mock/report.html" }]
+}
