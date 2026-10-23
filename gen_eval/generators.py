@@ -1,7 +1,7 @@
 """Node 3: generate.
 
 Three ways to produce text:
-  mock   : fake, deterministic, no network (the default)
+  mock   : mock data, deterministic, no network (the default)
   hf     : Hugging Face router (OpenAI-compatible), needs HF_TOKEN
   ollama : a model running on your own machine
 
@@ -63,7 +63,7 @@ def prompt_to_number(prompt: str) -> int:
 
 
 def mock_generate(prompt: str, variables: Dict[str, str]) -> str:
-    """Build fake output from the prompt: a canned opener, the key
+    """Build mock output from the prompt: a canned opener, the key
     variables, and a canned closer. Deterministic, so reports are stable."""
     n = prompt_to_number(prompt)
     opener = MOCK_OPENERS[n % len(MOCK_OPENERS)]
@@ -176,7 +176,7 @@ def generate(name: str, prompt: str, variables: Dict[str, str], model: Optional[
 def model_label(name: str, model: Optional[str]) -> str:
     """The model name to show in reports."""
     if name == "mock":
-        return "mock (fake, no model)"
+        return "mock data (no model)"
     if name == "hf":
         return model or DEFAULT_HF_MODEL
     return model or DEFAULT_OLLAMA_MODEL

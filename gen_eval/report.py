@@ -48,7 +48,7 @@ def build_run_info(rows: List[Dict], summary: List[Dict]) -> Dict:
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "generators": names,
         "includes_mock": has_mock,
-        "note": "Mock output is fake and deterministic. It is not a real model result."
+        "note": "Mock output is deterministic mock data. It is not a real model result."
         if has_mock else "",
     }
 
@@ -203,7 +203,7 @@ def build_html(rows: List[Dict], summary: List[Dict], info: Dict) -> str:
     for item in summary:
         label = item["generator"]
         if item["generator"] == "mock":
-            label = "mock (fake)"
+            label = "mock data"
         percent = str(round(item["pass_rate"] * 100)) + "%"
         parts.append('<div class="card"><div class="label">' + esc(label) + "</div>"
                      + '<div class="rate">' + esc(percent) + "</div>"

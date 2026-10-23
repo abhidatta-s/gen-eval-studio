@@ -35,7 +35,7 @@ def print_summary(summary, out_dir):
     for item in summary:
         name = item["generator"]
         if name == "mock":
-            name = "mock (fake)"
+            name = "mock data"
         percent = str(round(item["pass_rate"] * 100)) + "%"
         print(name.ljust(13) + "  " + str(item["passed"]).rjust(6) + "   "
               + str(item["total"]).rjust(5) + "   " + percent.rjust(9))
@@ -73,7 +73,7 @@ def main() -> int:
     result = write_report(rows, out_dir)
     print_summary(result["summary"], out_dir)
     if "mock" in names:
-        print("Note: mock output is fake. It is not a real model result.")
+        print("Note: mock output is mock data. It is not a real model result.")
     for row in rows:
         if row["error"] != "":
             print("Problem with " + row["generator"] + " on " + row["id"] + ": " + row["error"])

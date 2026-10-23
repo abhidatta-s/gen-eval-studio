@@ -81,15 +81,15 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 <main id="main">
 <h1>gen-eval-studio report</h1>
 <div class="sub">Date: 2026-10-23 09:24:13 | Generators: mock</div>
-<div class="banner"><strong>MOCK RUN.</strong> Mock output is fake and deterministic. It is not a real model result.</div>
+<div class="banner"><strong>MOCK RUN.</strong> Mock output is deterministic mock data. It is not a real model result.</div>
 <h2>Pass rate per generator</h2><div class="cards">
-<div class="card"><div class="label">mock (fake)</div><div class="rate">38%</div><div class="label">3 of 8 prompts passed</div></div>
+<div class="card"><div class="label">mock data</div><div class="rate">38%</div><div class="label">3 of 8 prompts passed</div></div>
 </div>
 <h2>Results per prompt and generator</h2>
 <div class='table-wrap'><table><tr><th>Prompt</th><th>Generator</th><th>Output</th><th>Checks</th><th>Result</th></tr>
 <tr>
 <td>caption_lamp<br><span class="reason">Write a short product image caption for a ceramic table lamp in sage green. Keep it under 15 words.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Presenting sage green, ceramic table lamp. Please try again.</td>
 <td><ul class="checks">
 <li><span class="pass">PASS</span> max_words <span class="reason">(9 words, limit is 15)</span></li>
@@ -99,7 +99,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>alt_text_sneaker<br><span class="reason">Write alt text for a photo of a red running sneaker on a wooden floor. Do not start with &#x27;image of&#x27; or &#x27;picture of&#x27;.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Meet a red running sneaker on a wooden floor, shown with calm colours and gentle contrast, in a style that feels warm.</td>
 <td><ul class="checks">
 <li><span class="fail">FAIL</span> max_words <span class="reason">(22 words, over the limit of 20)</span></li>
@@ -110,7 +110,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>button_label<br><span class="reason">Write a button label for the action: save my draft. Use at most 3 words.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Soft light on save my draft, ready for your next project.</td>
 <td><ul class="checks">
 <li><span class="fail">FAIL</span> max_words <span class="reason">(11 words, over the limit of 3)</span></li>
@@ -120,7 +120,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>error_message<br><span class="reason">Write a friendly error message for when a photo upload fails. Tell the user to try again.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Soft light on a photo upload fails, shown with calm colours and gentle contrast, in a style that feels warm.</td>
 <td><ul class="checks">
 <li><span class="pass">PASS</span> max_words <span class="reason">(20 words, limit is 20)</span></li>
@@ -131,7 +131,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>tts_number<br><span class="reason">Write the number 1250 exactly as a text-to-speech voice should say it, using words only.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">A clean studio shot of 1250.</td>
 <td><ul class="checks">
 <li><span class="fail">FAIL</span> no_digits <span class="reason">(contains 4 digit(s))</span></li>
@@ -141,7 +141,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>image_prompt_cafe<br><span class="reason">Write an image generation prompt for a rainy cafe window at dusk in watercolor style.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Soft light on a rainy cafe window at dusk, watercolor.</td>
 <td><ul class="checks">
 <li><span class="pass">PASS</span> min_words <span class="reason">(10 words, minimum is 8)</span></li>
@@ -151,7 +151,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>empty_state<br><span class="reason">Write empty state microcopy for a saved designs screen with no items yet. Maximum 12 words.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">A clean studio shot of saved designs, 24 hours a day.</td>
 <td><ul class="checks">
 <li><span class="pass">PASS</span> max_words <span class="reason">(11 words, limit is 12)</span></li>
@@ -161,7 +161,7 @@ if(window.matchMedia){var q=matchMedia('(prefers-color-scheme: light)');var f=fu
 </tr>
 <tr>
 <td>product_title<br><span class="reason">Write a product title for a travel mug. Use the format &#x27;Brand - Product name&#x27;.</span></td>
-<td>mock (MOCK)<br><span class="reason">mock (fake, no model)</span></td>
+<td>mock (MOCK)<br><span class="reason">mock data (no model)</span></td>
 <td class="output">Presenting travel mug, 24 hours a day.</td>
 <td><ul class="checks">
 <li><span class="fail">FAIL</span> regex <span class="reason">(does not match pattern ^[A-Za-z]+ - .+)</span></li>

@@ -23,7 +23,7 @@ One prompt from `prompts/sample_prompts.json`:
 }
 ```
 
-Running `python3 run.py` (mock generator, so the text is fake) gives this for that prompt (taken from `results.json`, laid out for reading):
+Running `python3 run.py` (mock generator, so the text is mock data) gives this for that prompt (taken from `results.json`, laid out for reading):
 
 ```
 Prompt:  Write a short product image caption for a ceramic table lamp in sage green. Keep it under 15 words.
@@ -38,7 +38,7 @@ and the terminal summary:
 ```
 Generator      Passed   Total   Pass rate
 -------------  ------   -----   ---------
-mock (fake)         3       8         38%
+mock data           3       8         38%
 ```
 
 The mock generator is deliberately imperfect so the report shows both passes and fails. A committed sample run is in [`eval/`](eval/). It is mock output only; no real model was run.
